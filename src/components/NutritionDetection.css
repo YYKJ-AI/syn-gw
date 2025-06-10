@@ -1,0 +1,224 @@
+.nutrition-detection {
+  padding: 80px 0;
+  background: #fff;
+  
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 标题部分 - 保持原有样式 */
+.detection-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.detection-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #003CBF;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.detection-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 检测结果展示 */
+.detection-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px; /* 减少间距 */
+  align-items: start;
+}
+
+/* 图片容器 */
+.result-image-container {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px; /* 减少内边距 */
+}
+
+.result-image-container:hover {
+  transform: translateY(-5px);
+  /* box-shadow: 0 12px 40px rgba(0,0,0,0.15); */
+}
+
+/* 实际图片样式 */
+.result-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* 图片占位符样式（用于开发时预览） */
+
+
+/* 平板适配 (768px - 1024px) - 关键修改 */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    padding: 0 15px; /* 减少左右边距 */
+  }
+  
+  .detection-results {
+    grid-template-columns: repeat(3, 1fr); /* 改为3列，不是2列 */
+    gap: 6px;
+  }
+  
+  /* 移除这段代码，不要让第三张图片单独一行 */
+  /*
+  .detection-results .result-image-container:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  */
+  
+  .result-image-container {
+    padding: 8px;
+  }
+  
+  /* 保持标题样式 */
+  .detection-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* 大屏手机和小平板 (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .nutrition-detection {
+    padding: 50px 0; /* 适度减少，不要太激进 */
+  }
+  
+  .detection-results {
+    grid-template-columns: repeat(3, 1fr); /* 保持3列 */
+    gap: 5px;
+  }
+  
+  .result-image-container {
+    padding: 6px;
+    /* 移除 max-width 限制 */
+  }
+  
+  /* 保持标题样式不变 */
+  .detection-header {
+    margin-bottom: 40px;
+  }
+  
+  .detection-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .detection-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .detection-results {
+    grid-template-columns: 1fr;
+    gap: 8px; /* 进一步减少到8px */
+  }
+  
+  .result-image-container {
+    padding: 12px; /* 从18px减少到12px */
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .image-placeholder {
+    height: 300px;
+    font-size: 1rem;
+  }
+}
+
+/* 普通手机 (320px - 480px) */
+@media (max-width: 480px) {
+  .nutrition-detection {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .detection-header {
+    margin-bottom: 30px;
+  }
+  
+  .detection-title {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+  
+  .detection-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .detection-results {
+    gap: 5px; /* 减少到5px */
+  }
+  
+  .result-image-container {
+    padding: 8px; /* 从15px减少到8px */
+    border-radius: 12px;
+  }
+  
+  .image-placeholder {
+    height: 250px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    padding: 15px;
+  }
+}
+
+/* 小屏手机 (最大320px) */
+@media (max-width: 320px) {
+  .detection-title {
+    font-size: 1.6rem;
+  }
+  
+  .detection-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .result-image-container {
+    padding: 12px;
+  }
+  
+  .image-placeholder {
+    height: 200px;
+    font-size: 0.8rem;
+    padding: 12px;
+  }
+}
+
+/* 横屏适配 */
+@media (max-height: 500px) and (orientation: landscape) {
+  .nutrition-detection {
+    padding: 30px 0;
+  }
+  
+  .detection-header {
+    margin-bottom: 25px;
+  }
+  
+  .detection-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .image-placeholder {
+    height: 200px;
+  }
+}

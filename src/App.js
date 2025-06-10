@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+
+import React, { useState } from 'react';
 import './App.css';
+import Home from './components/Home';
+import SplashScreen from './components/SplashScreen';
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
+      <Home />
     </div>
   );
 }
 
 export default App;
+

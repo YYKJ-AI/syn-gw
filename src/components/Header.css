@@ -1,0 +1,203 @@
+.header {
+  background: #fff;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0; /* 确保宽度占满整个视口 */
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+/* 添加一个占位元素，防止内容被fixed header覆盖 */
+body {
+  padding-top: 70px; /* 根据header的实际高度调整 */
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: url('../image/底部-logo.png') no-repeat center center;
+  background-size: contain;
+  border-radius: 8px;
+  /* 强制浏览器使用更好的缩放算法 */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  /* 确保图片不会被拉伸变形 */
+  background-size: auto 100%; /* 或者试试 'cover' */
+}
+
+.logo-text .company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+}
+
+.logo-text .slogan {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 8px 0;
+}
+
+.nav-item:hover {
+  color: #003CBF;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.language-switcher {
+  position: relative;
+}
+
+.language-dropdown {
+  position: relative;
+}
+
+.language-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  justify-content: space-between;
+}
+
+.language-btn:hover {
+  border-color: #003CBF;
+  color: #003CBF;
+}
+
+.dropdown-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.language-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1001;
+}
+
+.language-option {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.language-option:hover {
+  background-color: #f5f5f5;
+}
+
+.language-option.active {
+  background-color: #003CBF;
+  color: white;
+}
+
+.language-option.active:hover {
+  background-color: #1e3f73;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.menu-line {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .nav.nav-open {
+    display: flex;
+  }
+  
+  .nav-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .logo-text .company-name {
+    font-size: 1.2rem;
+  }
+  
+  .logo-text .slogan {
+    font-size: 0.8rem;
+  }
+}

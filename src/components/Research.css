@@ -1,0 +1,501 @@
+.research {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.research-header {
+  text-align: center;
+  margin-bottom: 60px;
+  
+}
+
+.research-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003CBF;
+  margin-bottom: 20px;
+}
+
+.research-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 主要内容区域 - 左右对齐 */
+.research-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start; /* 保持原来的start */
+}
+
+/* 核心成果容器 */
+.core-results-container {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  min-height: 600px;
+  justify-content: space-between; /* 让内容分布均匀 */
+}
+
+/* 创新总结样式 */
+.innovation-summary {
+  background: linear-gradient(135deg, #003CBF 0%, #0056E0 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0; /* 移除所有边距 */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-top: auto; /* 推到容器底部 */
+}
+
+/* 右侧区域 */
+.research-right {
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  min-height: 600px; /* 与左侧相同的最小高度 */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 证据部分 */
+.evidence-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 600px; /* 确保内容区域也有足够高度 */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .core-results-container,
+  .research-right,
+  .evidence-section {
+    min-height: 500px; /* 移动端稍微减少高度 */
+  }
+}
+
+@media (max-width: 480px) {
+  .core-results-container,
+  .research-right,
+  .evidence-section {
+    min-height: 400px; /* 小屏幕进一步减少高度 */
+  }
+}
+
+.core-result-item {
+  border-bottom: 1px solid #f0f1f2;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px; /* 设置最小高度确保对齐 */
+}
+
+.core-result-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.core-result-header {
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  display: flex; /* 改为弹性布局 */
+  align-items: center; /* 垂直居中对齐 */
+  flex-wrap: wrap; /* 允许换行 */
+  gap: 12px; /* 标签和描述之间的间距 */
+}
+
+.core-result-label {
+  display: inline-block;
+  background: #003CBF;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0; /* 移除底部边距 */
+  flex-shrink: 0; /* 防止标签被压缩 */
+}
+
+.core-result-description {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4;
+  flex: 1; /* 让描述占据剩余空间 */
+  min-width: 200px; /* 设置最小宽度，确保合理换行 */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .core-result-header {
+    flex-direction: column; /* 移动端改为垂直布局 */
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .core-result-description {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .core-result-header {
+    gap: 6px;
+  }
+}
+
+.core-result-visual {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.core-result-1-visual {
+  text-align: center;
+  padding: 0 30px;
+}
+
+.core-result-1-visual img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.core-result-2-visual {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.core-result-2-visual img {
+  max-width: 84%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .core-result-1-visual img {
+    max-width: 65%;
+  }
+  
+  .core-result-2-visual img {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .core-result-1-visual {
+    padding: 0 15px;
+  }
+  
+  .core-result-1-visual img {
+    max-width: 70%;
+  }
+  
+  .core-result-2-visual {
+    padding: 0 10px;
+  }
+  
+  .core-result-2-visual img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .core-result-1-visual img {
+    max-width: 80%;
+  }
+  
+  .core-result-2-visual img {
+    max-width: 95%;
+  }
+}
+
+/* 创新总结 */
+.innovation-summary {
+  background: linear-gradient(135deg, #003CBF 0%, #0056E0 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 20px 0 0 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* 同时调整核心成果容器，确保高度对齐 */
+.core-results-container {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  min-height: 600px;
+  justify-content: space-between; /* 让内容均匀分布 */
+}
+.innovation-text {
+  font-family: PingFang SC, PingFang SC;
+  font-weight: 400;
+  font-size: 16px;
+  color: #999999;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .innovation-text {
+    padding: 15px;
+    font-size: 0.9rem;
+    margin: 15px 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .innovation-text {
+    padding: 12px;
+    font-size: 0.85rem;
+    margin: 12px 0 0 0;
+  }
+}
+
+.paper-display {
+  padding: 25px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.paper-display img {
+  max-width: 85%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.evidence-content {
+  padding: 25px;
+  flex: 1;
+}
+
+.evidence-title {
+  font-size: 1.2rem;
+  color: #003CBF;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.evidence-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.evidence-item {
+  background: #f8f9ff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #003CBF;
+}
+
+.evidence-quote {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.evidence-quote::before {
+  content: '"';
+  color: #003CBF;
+  font-weight: bold;
+}
+
+.evidence-quote::after {
+  content: '"';
+  color: #003CBF;
+  font-weight: bold;
+}
+
+.evidence-source {
+  font-size: 0.8rem;
+  color: #666;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+/* 平板端适配 */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .research {
+    padding: 60px 0;
+  }
+  
+  .research-content {
+    gap: 40px;
+  }
+  
+  .research-title {
+    font-size: 2.2rem;
+  }
+  
+  .core-results-container {
+    padding: 25px;
+    gap: 25px;
+  }
+  
+  .core-result-visual img {
+    max-width: 85%;
+  }
+  
+  .paper-display img {
+    max-width: 90%;
+  }
+  
+  .innovation-summary {
+    padding: 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 手机端适配 */
+@media (max-width: 768px) {
+  .research {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .research-header {
+    margin-bottom: 40px;
+  }
+  
+  .research-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .research-subtitle {
+    font-size: 1rem;
+  }
+  
+  .research-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .core-results-container {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .core-result-visual {
+    padding: 0 10px;
+  }
+  
+  .core-result-visual img {
+    max-width: 90%;
+  }
+  
+  .paper-display img {
+    max-width: 95%;
+  }
+  
+  .core-result-description {
+    font-size: 0.95rem;
+  }
+  
+  .innovation-summary {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .evidence-title {
+    font-size: 1.1rem;
+  }
+  
+  .evidence-quote {
+    font-size: 0.85rem;
+  }
+}
+
+/* 小屏手机适配 */
+@media (max-width: 480px) {
+  .research {
+    padding: 30px 0;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .research-title {
+    font-size: 1.5rem;
+  }
+  
+  .research-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .core-results-container {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .core-result-visual img {
+    max-width: 95%;
+  }
+  
+  .paper-display img {
+    max-width: 100%;
+  }
+  
+  .core-result-label {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .core-result-description {
+    font-size: 0.9rem;
+  }
+  
+  .innovation-summary {
+    padding: 15px;
+    font-size: 0.85rem;
+  }
+  
+  .evidence-quote {
+    font-size: 0.8rem;
+  }
+  
+  .evidence-source {
+    font-size: 0.75rem;
+  }
+}

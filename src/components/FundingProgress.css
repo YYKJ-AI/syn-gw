@@ -1,0 +1,235 @@
+.funding-progress {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+.funding-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bgZoom 20s infinite alternate;
+}
+
+@keyframes bgZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.funding-content {
+  text-align: center;
+}
+
+.funding-title {
+    margin-top: -200px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003CBF;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes titleGlow {
+  0% { text-shadow: 0 0 5px rgba(0, 60, 191, 0.3); }
+  100% { text-shadow: 0 0 15px rgba(0, 60, 191, 0.7); }
+}
+
+
+@keyframes lineWidth {
+  0% { width: 60px; }
+  100% { width: 100px; }
+}
+
+.funding-diagram {
+  margin-top: 60px;
+  position: relative;
+}
+
+.steps-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.steps-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: stepsFloat 4s ease-in-out infinite; 
+}
+
+@keyframes stepsFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.funding-stages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.funding-stage {
+  position: absolute;
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+.stage-1 {
+  top: 60%;
+  left: 20%;
+  animation-delay: 0.8s;
+}
+
+.stage-2 {
+  top: 20%;
+  right: 20%;
+  animation-delay: 1.5s;
+}
+
+.stage-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  text-align: center;
+  transform: translateY(20px);
+  animation: slideUpBounce 1s forwards, pulseBox 3s infinite alternate;
+  animation-delay: inherit, calc(var(--animation-delay) + 1s);
+}
+
+.stage-1 .stage-box {
+  --animation-delay: 0.8s;
+}
+
+.stage-2 .stage-box {
+  --animation-delay: 1.5s;
+}
+
+@keyframes slideUpBounce {
+  0% { transform: translateY(50px); opacity: 0; }
+  60% { transform: translateY(-10px); opacity: 1; }
+  80% { transform: translateY(5px); }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulseBox {
+  0% { box-shadow: 0 4px 15px rgba(0, 60, 191, 0.1); transform: scale(1); }
+  100% { box-shadow: 0 8px 25px rgba(0, 60, 191, 0.3); transform: scale(1.05); }
+}
+
+.stage-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #003CBF;
+  margin-bottom: 5px;
+  animation: colorShift 4s infinite alternate;
+  animation-delay: calc(var(--animation-delay) + 1.5s);
+}
+
+@keyframes colorShift {
+  0% { color: #003CBF; }
+  50% { color: #0056E0; }
+  100% { color: #0077FF; }
+}
+
+.stage-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  animation: fadeInText 1s forwards;
+  animation-delay: calc(var(--animation-delay) + 0.5s);
+  opacity: 0;
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateX(-10px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 添加闪光点效果 */
+.stage-1::before, .stage-2::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #0056E0;
+  border-radius: 50%;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  animation: blink 1.5s infinite;
+}
+
+.stage-2::before {
+  left: auto;
+  right: -20px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px #0056E0; }
+  50% { opacity: 0.3; box-shadow: 0 0 5px #0056E0; }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .funding-title {
+    font-size: 2rem;
+  }
+  
+  .stage-1 {
+    top: 55%;
+    left: 10%;
+  }
+  
+  .stage-2 {
+    top: 15%;
+    right: 10%;
+  }
+  
+  .stage-box {
+    padding: 10px 15px;
+    max-width: 200px;
+  }
+  
+  .stage-title {
+    font-size: 1rem;
+  }
+  
+  .stage-description {
+    font-size: 0.8rem;
+  }
+}

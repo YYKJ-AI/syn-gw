@@ -1,0 +1,450 @@
+.metabolism-analysis {
+  padding: 20px 0;
+  background: #FFF;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.metabolism-analysis .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.analysis-content {
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003CBF;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+.analysis-diagram {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 0;
+  gap: 20px;
+}
+
+/* 左侧输入区域 */
+.input-section {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.input-container {
+  /* border: 2px dashed #cbd5e1; */
+  border-radius: 20px;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.input-module {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.input-module:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+  border-color: #003CBF;
+}
+
+.module-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.basic-icon {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.nutrition-icon {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+
+.physiology-icon {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.module-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.3;
+  flex: 1;
+}
+
+/* 中间流程区域 */
+.center-flow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 10px;
+}
+
+.data-collection,
+.risk-assessment {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* 纯文字样式 - 调整为适应不同语言长度 */
+.flow-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #003CBF;
+  text-align: center;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  white-space: nowrap;
+  min-width: fit-content;
+  width: auto;
+  display: inline-block;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flow-arrow {
+  font-size: 1.5rem;
+  color: #003CBF;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* AI系统 */
+.ai-center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.circuit-background {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+}
+
+.circuit-background::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 1px dashed #e2e8f0;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ai-circle {
+  width: 190px;
+  height: 190px;
+  background: linear-gradient(135deg, #003CBF, #1d4ed8);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 10px 40px rgba(37, 99, 235, 0.3);
+  position: relative;
+  z-index: 2;
+  border: 3px solid white;
+}
+
+.ai-text {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.ai-subtitle {
+  font-size: 0.65rem;
+  font-weight: 600;
+  margin-top: 3px;
+  opacity: 0.9;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* 右侧输出区域 */
+.output-section {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.output-container {
+    margin-left: 30px;
+  /* border: 2px dashed #cbd5e1; */
+  border-radius: 20px;
+  padding: 30px 10px;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+}
+
+.health-indicators {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.health-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.health-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
+}
+
+.health-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.heart-icon {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.respiratory-icon {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.circulation-icon {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.gastric-icon {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+
+.health-item span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.3;
+  flex: 1;
+}
+
+/* 平板端适配 */
+@media (max-width: 1024px) {
+  .metabolism-analysis {
+    padding: 60px 0;
+  }
+  
+  .main-title {
+    font-size: 2.2rem;
+  }
+  
+  .analysis-diagram {
+    flex-direction: column;
+    gap: 40px;
+    max-width: 600px;
+  }
+  
+  .input-section,
+  .output-section {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .center-flow {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    padding: 0;
+  }
+  
+  .flow-text {
+    max-width: 200px;
+    font-size: 1rem;
+  }
+  
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .health-indicators {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .health-item {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+/* 手机端适配 */
+@media (max-width: 768px) {
+  .metabolism-analysis {
+    padding: 40px 0;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .input-container,
+  .output-container {
+    padding: 20px 15px;
+  }
+  
+  .input-module,
+  .health-item {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  
+  .module-icon,
+  .health-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  
+  .module-label,
+  .health-item span {
+    font-size: 0.85rem;
+  }
+  
+  .ai-circle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .ai-text {
+    font-size: 1.3rem;
+  }
+  
+  .ai-subtitle {
+    font-size: 0.45rem;
+  }
+  
+  .flow-text {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    max-width: 150px;
+  }
+  
+  .health-indicators {
+    gap: 8px;
+  }
+  
+  .health-item {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .metabolism-analysis .container {
+    padding: 0 15px;
+  }
+  
+  .main-title {
+    font-size: 1.6rem;
+  }
+  
+  .analysis-diagram {
+    gap: 30px;
+  }
+  
+  .input-container,
+  .output-container {
+    padding: 15px 10px;
+  }
+  
+  .center-flow {
+    gap: 15px;
+  }
+  
+  .flow-text {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    max-width: 120px;
+  }
+  
+  .health-indicators {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .health-item {
+    min-width: auto;
+  }
+}

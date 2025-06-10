@@ -1,0 +1,204 @@
+.footer {
+  background-color: #fff;
+  padding: 40px 0 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.footer-logo {
+  flex: 0 0 80px;
+}
+
+.footer-info {
+  flex: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  max-width: none;
+  gap: 20px;
+}
+
+.info-item {
+  margin: 0;
+  min-width: 120px;
+  white-space: nowrap;
+  position: relative;
+}
+.info-item h3{
+    width: 51px;
+height: 12px;
+font-family: PingFang SC, PingFang SC;
+font-weight: 400;
+font-size: 14px;
+color: #808080;
+line-height: 14px;
+text-align: left;
+font-style: normal;
+text-transform: none;
+margin-bottom: 20px;
+}
+.info-item p{
+    width: 300px;
+    height: 12px;
+    font-family: PingFang SC, PingFang SC;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4D4D4D;
+    line-height: 14px;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+}
+
+
+/* 添加竖线分隔符 */
+/* .info-item:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 1.2rem;
+} */
+
+.footer-social {
+  flex: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* 添加到现有CSS文件中 */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: translateY(-3px);
+}
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #003CBF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 60, 191, 0.2);
+  background-color: #0056E0;
+}
+
+/* 使用伪元素添加图标 */
+.social-icon::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-icon.wechat::before {
+  content: '微';
+  color: white;
+  font-size: 12px;
+}
+
+.social-icon.weibo::before {
+  content: '博';
+  color: white;
+  font-size: 12px;
+}
+
+.social-icon.instagram::before {
+  content: 'In';
+  color: white;
+  font-size: 12px;
+}
+
+.social-icon.twitter::before {
+  content: 'T';
+  color: white;
+  font-size: 12px;
+}
+
+.social-icon.facebook::before {
+  content: 'F';
+  color: white;
+  font-size: 12px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .footer-logo {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .footer-info {
+    margin-bottom: 30px;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  
+  .footer-social {
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-info {
+    flex-direction: column;
+  }
+  
+  .info-item {
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
