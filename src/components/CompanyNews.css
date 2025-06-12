@@ -1,12 +1,13 @@
 .company-news {
   padding: 80px 0;
-  background-color: #fff;
+  background-color:  #FAFAFA;;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  background-color:  #FAFAFA;;
 }
 
 .news-header {
@@ -15,6 +16,7 @@
 }
 
 .news-title {
+  scroll-margin-top: 180px;
   font-size: 2.5rem;
   font-weight: bold;
   color: #003CBF;
@@ -38,7 +40,6 @@
 .news-timeline {
   position: relative;
   overflow: hidden;
-  padding: 20px 0;
 }
 
 .news-carousel {
@@ -52,15 +53,15 @@
   justify-content: space-between;
   gap: 20px;
   transition: transform 0.8s ease;
+  background-color:  #FAFAFA;
 }
 
 /* 卡片样式 */
 .news-card {
   flex: 0 0 calc(33.333% - 20px);
-  background: white;
+  background-color: #FAFAFA;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   transition: transform 0.3s ease;
 }

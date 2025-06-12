@@ -1,18 +1,18 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './FundingProgress.css';
-import fundingBgImage from '../image/融资底图@2x.png';
+import fundingBgImage from '../image/融资底图@2x.jpg';
 import stepsImage from '../image/阶梯@2x.png';
 
 function FundingProgress() {
   const { t } = useTranslation();
 
   return (
-    <div className="funding-progress" id="funding">
-      <div className="funding-background" style={{ backgroundImage: `url(${fundingBgImage})` }}>
-        <div className="container">
+    <div className="funding-progress">
+      <div className="funding-background"  style={{ backgroundImage: `url(${fundingBgImage})` }}>
+       
           <div className="funding-content">
-            <h2 className="funding-title">融资进度</h2>
+            <h2 className="funding-title"  id="funding">融资进度</h2>
             
             <div className="funding-diagram">
               <div className="steps-container">
@@ -36,7 +36,7 @@ function FundingProgress() {
             </div>
           </div>
         </div>
-      </div>
+      
     </div>
   );
 }

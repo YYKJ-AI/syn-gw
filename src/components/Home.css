@@ -1,9 +1,10 @@
 .home {
+  background-color: #FAFAFA;;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* 确保所有子组件居中 */
+  align-items: center; 
   --scroll: 0;
   overflow-x: hidden; /* 防止水平滚动条 */
 }
@@ -17,10 +18,9 @@
 
 /* 统一容器样式 - 保持原有宽度 */
 .home .container {
-    background-color: #ffffff;
+    background-color: #FAFAFA;
   max-width: 1200px; /* 保持原有宽度 */
   margin: 0 auto;
-  padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -38,7 +38,7 @@
   }
 }
 body {
-    background-color: #fff; 
+    background-color: #FAFAFA; 
 }
 
 /* 回到顶部按钮样式 */
@@ -162,6 +162,13 @@ body {
 }
 
 .funding-section {
+  /* 确保融资进度始终可见 */
+  .animate-section:has(> #funding),
+  .animate-section:has(> [id="funding"]) {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
   opacity: 1 !important;
   transform: translateY(0) !important;
 }

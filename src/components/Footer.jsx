@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './Footer.css';
-import footerLogo from '../image/底部-logo.png';
+import footerLogo from '../image/瘦金体logo@2x.png';
 import xiaohongshuIcon from '../image/小红书@2x.png';
 import bilibiliIcon from '../image/b站@2x.png';
 import wechatIcon from '../image/微信公众号@2x.png';
@@ -16,7 +16,7 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo">
-            <img src={footerLogo} alt="盈养科技" />
+            <img src={footerLogo} alt="盈养科技" className='footer-img' />
           </div>
           
           <div className="footer-info">

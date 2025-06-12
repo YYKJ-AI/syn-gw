@@ -62,10 +62,10 @@ function CompanyNews() {
   }, [newsCards.length]);
 
   return (
-    <div className="company-news" id="dynamics">
+    <div className="company-news" >
       <div className="container">
         <div className="news-header">
-          <h2 className="news-title">动态信息</h2>
+          <h2 className="news-title" id="dynamics">动态信息</h2>
           <p className="news-subtitle">盈养科技的发展历程</p>
         </div>
         

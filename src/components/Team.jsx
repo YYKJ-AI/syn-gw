@@ -10,10 +10,10 @@ import chenImage from '../image/FigmaDDSSlicePNGae6dc9304ba87b878e1b5f00b7a4e80f
 
 function Team() {
   return (
-    <div className="team" id="team">
+    <div className="team">
       <div className="container">
         <div className="team-header">
-          <h2 className="team-title">我们的团队</h2>
+          <h2 className="team-title" id="team">我们的团队</h2>
         </div>
         
         <div className="team-members">

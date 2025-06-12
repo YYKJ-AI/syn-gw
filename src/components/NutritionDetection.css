@@ -1,6 +1,6 @@
 .nutrition-detection {
   padding: 80px 0;
-  background: #fff;
+  background:#FAFAFA;;
   
 }
 
@@ -17,6 +17,7 @@
 }
 
 .detection-title {
+  scroll-margin-top: 140px;
   font-size: 3rem;
   font-weight: bold;
   color: #003CBF;

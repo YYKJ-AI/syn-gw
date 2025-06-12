@@ -1,9 +1,6 @@
 .funding-progress {
   position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 65vh;
   overflow: hidden; 
 }
 
@@ -17,9 +14,8 @@
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
-  animation: bgZoom 20s infinite alternate;
+
 }
 
 @keyframes bgZoom {
@@ -29,32 +25,34 @@
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
+  margin: 0 auto; 
   z-index: 2;
   width: 100%;
+  height: 80%;
+  background-color:  transparent;
 }
 
 .funding-content {
   text-align: center;
+  margin-top: 25px; /* 确保没有额外的顶部外边距 */
+  background-color:  transparent;
 }
 
 .funding-title {
-    margin-top: -200px;
+  scroll-margin-top: 100px;
+   margin-top: 120px;
   font-size: 2.5rem;
   font-weight: bold;
   color: #003CBF;
   margin-bottom: 40px;
-  text-align: center;
   position: relative;
   display: inline-block;
 }
 
-@keyframes titleGlow {
+/* @keyframes titleGlow {
   0% { text-shadow: 0 0 5px rgba(0, 60, 191, 0.3); }
   100% { text-shadow: 0 0 15px rgba(0, 60, 191, 0.7); }
-}
+} */
 
 
 @keyframes lineWidth {
@@ -90,7 +88,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -115,13 +112,13 @@
 }
 
 .stage-box {
-  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   padding: 15px 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   max-width: 250px;
   text-align: center;
   transform: translateY(20px);
+  background-color: transparent; 
   animation: slideUpBounce 1s forwards, pulseBox 3s infinite alternate;
   animation-delay: inherit, calc(var(--animation-delay) + 1s);
 }
@@ -186,7 +183,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background: #0056E0;
+  background: #003CBF;
   border-radius: 50%;
   top: 50%;
   left: -20px;
@@ -200,8 +197,8 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; box-shadow: 0 0 10px #0056E0; }
-  50% { opacity: 0.3; box-shadow: 0 0 5px #0056E0; }
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px #003CBF; }
+  50% { opacity: 0.3; box-shadow: 0 0 5px #003CBF; }
 }
 
 /* 响应式设计 - 平板设备 */

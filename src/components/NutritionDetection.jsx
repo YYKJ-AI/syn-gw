@@ -11,11 +11,11 @@ const NutritionDetection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="nutrition-detection" id="why-choose">
-      <div className="container">
+    <section className="nutrition-detection">
+      <div className="container" >
         {/* 标题部分 */}
-        <div className="detection-header">
-          <h2 className="detection-title">{t('nutrition.title')}</h2>
+        <div className="detection-header" >
+          <h2 className="detection-title" id="nutrition-title">{t('nutrition.title')}</h2>
           <p className="detection-subtitle">
             {t('nutrition.subtitle')}
           </p>
