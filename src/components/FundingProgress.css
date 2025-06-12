@@ -204,32 +204,239 @@
   50% { opacity: 0.3; box-shadow: 0 0 5px #0056E0; }
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
+/* 响应式设计 - 平板设备 */
+@media (max-width: 1024px) {
+  .funding-progress {
+    min-height: 60vh;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
   .funding-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-top: -150px;
+    margin-bottom: 30px;
+  }
+  
+  .funding-diagram {
+    margin-top: 40px;
+  }
+  
+  .steps-container {
+    max-width: 600px;
   }
   
   .stage-1 {
-    top: 55%;
-    left: 10%;
+    top: 65%;
+    left: 15%;
   }
   
   .stage-2 {
-    top: 15%;
-    right: 10%;
+    top: 25%;
+    right: 15%;
+  }
+  
+  .stage-box {
+    padding: 12px 18px;
+    max-width: 220px;
+  }
+  
+  .stage-title {
+    font-size: 1.05rem;
+  }
+  
+  .stage-description {
+    font-size: 0.85rem;
+  }
+}
+
+/* 响应式设计 - 手机设备 */
+@media (max-width: 768px) {
+  .funding-progress {
+    min-height: 50vh;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .funding-title {
+    font-size: 1.8rem;
+    margin-top: -100px;
+    margin-bottom: 25px;
+  }
+  
+  .funding-diagram {
+    margin-top: 30px;
+  }
+  
+  .steps-container {
+    max-width: 400px;
+  }
+  
+  .stage-1 {
+    top: 60%;
+    left: 5%;
+  }
+  
+  .stage-2 {
+    top: 20%;
+    right: 5%;
   }
   
   .stage-box {
     padding: 10px 15px;
-    max-width: 200px;
+    max-width: 180px;
+    font-size: 0.9rem;
   }
   
   .stage-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
   }
   
   .stage-description {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  .stage-1::before, .stage-2::before {
+    width: 8px;
+    height: 8px;
+    left: -15px;
+  }
+  
+  .stage-2::before {
+    right: -15px;
+    left: auto;
+  }
+}
+
+/* 响应式设计 - 小屏手机 */
+@media (max-width: 480px) {
+  .funding-progress {
+    min-height: 45vh;
+  }
+  
+  .funding-title {
+    font-size: 1.5rem;
+    margin-top: -80px;
+    margin-bottom: 20px;
+  }
+  
+  .funding-diagram {
+    margin-top: 20px;
+  }
+  
+  .steps-container {
+    max-width: 320px;
+  }
+  
+  .funding-stages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .stage-1, .stage-2 {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .stage-box {
+    padding: 8px 12px;
+    max-width: 280px;
+    width: 90%;
+  }
+  
+  .stage-title {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+  }
+  
+  .stage-description {
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+  
+  .stage-1::before, .stage-2::before {
+    display: none;
+  }
+  
+  /* 禁用一些动画以提高性能 */
+  .funding-background {
+    animation: none;
+  }
+  
+  .steps-image {
+    animation: none;
+  }
+}
+
+/* 响应式设计 - 超小屏设备 */
+@media (max-width: 360px) {
+  .funding-progress {
+    min-height: 40vh;
+  }
+  
+  .container {
+    padding: 0 8px;
+  }
+  
+  .funding-title {
+    font-size: 1.3rem;
+    margin-top: -60px;
+    margin-bottom: 15px;
+  }
+  
+  .funding-diagram {
+    margin-top: 15px;
+  }
+  
+  .steps-container {
+    max-width: 280px;
+  }
+  
+  .funding-stages {
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .stage-box {
+    padding: 6px 10px;
+    max-width: 250px;
+  }
+  
+  .stage-title {
     font-size: 0.8rem;
+  }
+  
+  .stage-description {
+    font-size: 0.65rem;
+  }
+  
+  /* 进一步简化动画 */
+  .stage-box {
+    animation: none;
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stage-title {
+    animation: none;
+  }
+  
+  .stage-description {
+    animation: none;
+    opacity: 1;
   }
 }

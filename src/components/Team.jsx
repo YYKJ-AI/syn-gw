@@ -4,7 +4,7 @@ import './Team.css';
 // 导入团队成员头像
 import kongImage from '../image/头像-孔繁程@2x.png';
 import maImage from '../image/头像-马圣杰@2x.png';
-import wangImage from '../image/头像-孔繁程@2x.png';
+import wangImage from '../image/头像-谢纯@2x (1).png';
 import xiaoImage from '../image/FigmaDDSSlicePNGbd1677346eaddbb6c0d544b5c278057e.png';
 import chenImage from '../image/FigmaDDSSlicePNGae6dc9304ba87b878e1b5f00b7a4e80f.png';
 
@@ -67,7 +67,7 @@ function Team() {
           
           <div className="team-member" data-aos="fade-up" data-aos-delay="300">
             <div className="member-avatar">
-              <img src={xiaoImage} alt="肖纯" />
+              <img src={wangImage} alt="肖纯" />
             </div>
             <div className="member-info">
               <h3 className="member-name">谢纯</h3>

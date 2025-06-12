@@ -147,3 +147,160 @@
     transform: translateY(0);
   }
 }
+
+
+
+/* 响应式设计 - 平板设备 */
+@media (max-width: 1024px) {
+  .team-members {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .team-title {
+    font-size: 2.2rem;
+  }
+  
+  .member-avatar {
+    height: 160px;
+  }
+  
+  .member-avatar img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* 响应式设计 - 小平板设备 */
+@media (max-width: 768px) {
+  .team {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .team-members {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .team-title {
+    font-size: 2rem;
+  }
+  
+  .team-header {
+    margin-bottom: 40px;
+  }
+  
+  .member-avatar {
+    height: 140px;
+  }
+  
+  .member-avatar img {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .member-info {
+    padding: 15px;
+  }
+  
+  .member-name {
+    font-size: 1.3rem;
+  }
+  
+  .member-title {
+    font-size: 0.9rem;
+  }
+  
+  .member-description {
+    font-size: 0.85rem;
+  }
+}
+
+/* 响应式设计 - 手机设备 */
+@media (max-width: 480px) {
+  .team {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .team-members {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .team-title {
+    font-size: 1.8rem;
+  }
+  
+  .team-header {
+    margin-bottom: 30px;
+  }
+  
+  .member-avatar {
+    height: 120px;
+  }
+  
+  .member-avatar img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .member-info {
+    padding: 15px;
+  }
+  
+  .member-name {
+    font-size: 1.2rem;
+  }
+  
+  .member-title {
+    font-size: 0.85rem;
+  }
+  
+  .member-description {
+    font-size: 0.8rem;
+  }
+  
+  .member-description p {
+    margin-bottom: 6px;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 360px) {
+  .team-title {
+    font-size: 1.6rem;
+  }
+  
+  .member-avatar {
+    height: 100px;
+  }
+  
+  .member-avatar img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .member-info {
+    padding: 12px;
+  }
+  
+  .member-name {
+    font-size: 1.1rem;
+  }
+  
+  .member-title {
+    font-size: 0.8rem;
+  }
+  
+  .member-description {
+    font-size: 0.75rem;
+  }
+}

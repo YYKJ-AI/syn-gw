@@ -17,7 +17,7 @@
 .news-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #0056E0;
+  color: #003CBF;
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
@@ -123,19 +123,210 @@
 }
 
 /* 响应式调整 */
-@media (max-width: 992px) {
+/* 响应式设计 - 平板设备 */
+@media (max-width: 1024px) {
+  .company-news {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .news-header {
+    margin-bottom: 40px;
+  }
+  
+  .news-title {
+    font-size: 2rem;
+  }
+  
+  .news-subtitle {
+    font-size: 1.1rem;
+  }
+  
   .news-cards-container {
-    flex-wrap: wrap;
+    gap: 15px;
   }
   
   .news-card {
-    flex: 0 0 calc(50% - 20px);
-    margin-bottom: 30px;
+    flex: 0 0 calc(50% - 15px);
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+  }
+  
+  .card-image {
+    height: 180px;
   }
 }
 
-@media (max-width: 576px) {
+/* 响应式设计 - 手机设备 */
+@media (max-width: 768px) {
+  .company-news {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .news-header {
+    margin-bottom: 30px;
+  }
+  
+  .news-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .news-subtitle {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .news-timeline {
+    padding: 15px 0;
+  }
+  
+  .news-cards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
   .news-card {
     flex: 0 0 100%;
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+  
+  .card-year {
+    top: 15px;
+    left: 15px;
+    font-size: 0.9rem;
+    padding: 4px 12px;
+  }
+  
+  .card-content {
+    padding: 50px 15px 15px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .card-image {
+    height: 160px;
+  }
+}
+
+/* 响应式设计 - 小屏手机 */
+@media (max-width: 480px) {
+  .company-news {
+    padding: 30px 0;
+  }
+  
+  .news-header {
+    margin-bottom: 25px;
+  }
+  
+  .news-title {
+    font-size: 1.5rem;
+  }
+  
+  .news-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .news-cards-container {
+    gap: 15px;
+  }
+  
+  .card-year {
+    top: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+  }
+  
+  .card-content {
+    padding: 40px 12px 12px;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .card-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  
+  .card-image {
+    height: 140px;
+    border-radius: 6px;
+  }
+  
+  .news-card {
+    border-radius: 10px;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* 响应式设计 - 超小屏设备 */
+@media (max-width: 360px) {
+  .company-news {
+    padding: 25px 0;
+  }
+  
+  .container {
+    padding: 0 8px;
+  }
+  
+  .news-title {
+    font-size: 1.3rem;
+  }
+  
+  .news-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .card-content {
+    padding: 35px 10px 10px;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .card-description {
+    font-size: 0.75rem;
+  }
+  
+  .card-image {
+    height: 120px;
+  }
+  
+  .card-year {
+    font-size: 0.75rem;
+    padding: 2px 8px;
   }
 }

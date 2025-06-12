@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './Research.css';
 import coreResult1 from '../image/图-核心成果1@2x.png';
-import coreResult2 from '../image/图-核心成果2@2x.png';
+import coreResult2 from '../image/图-核心成果2@2x (1).png';
 import paperImage from '../image/论文图片@2x.png';
 
 function Research() {

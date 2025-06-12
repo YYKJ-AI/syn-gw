@@ -19,7 +19,7 @@
 .main-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2563eb;
+  color: #003CBF;
   margin-bottom: 10px;
   letter-spacing: 2px;
 }
@@ -547,3 +547,226 @@ text-transform: none;
   .dot.active {
     background-color: #003CBF;
   }
+
+/* 响应式设计 - 平板设备 */
+@media (max-width: 1024px) {
+  .correction-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .vitamin-card,
+  .diet-advice,
+  .carousel-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* 响应式设计 - 手机设备 */
+@media (max-width: 768px) {
+  .nutrition-correction {
+    padding: 40px 0;
+  }
+  
+  .nutrition-correction .container {
+    padding: 0 15px;
+  }
+  
+  .correction-layout {
+    gap: 15px;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+  
+  .vitamin-card {
+    padding-top: 15px;
+  }
+  
+  .card-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .card-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .deficiency-value {
+    font-size: 1.3rem;
+  }
+  
+  .deficiency-meter {
+    padding: 0 15px;
+  }
+  
+  .body-effects {
+    padding: 15px;
+  }
+  
+  .effects-grid {
+    gap: 10px;
+  }
+  
+  .effect-tag {
+    width: 100px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .diet-advice {
+    padding-left: 15px;
+  }
+  
+  .diet-advice h3 {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .food-image1 {
+    width: 180px;
+    height: 70px;
+    margin-left: 10px;
+  }
+  
+  .food-image2 {
+    width: 300px;
+    height: 130px;
+  }
+  
+  .section-title {
+    font-size: 14px;
+  }
+  
+  .section-title span {
+    font-size: 20px;
+  }
+  
+  .advice-text {
+    font-size: 12px;
+    margin-left: 20px;
+  }
+  
+  .doctor-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .doctor-name {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  .doctor-text {
+    font-size: 16px;
+    line-height: 22px;
+    width: 180px;
+    height: auto;
+  }
+  
+  .doctor-news,
+  .doctor-new {
+    width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .card {
+    padding: 15px;
+    width: 100%;
+  }
+  
+  .carousel-container {
+    width: 100%;
+  }
+}
+
+/* 响应式设计 - 小屏手机 */
+@media (max-width: 480px) {
+  .nutrition-correction {
+    padding: 30px 0;
+  }
+  
+  .main-title {
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .deficiency-label {
+    margin-left: 0;
+  }
+  
+  .effects-grid {
+    justify-content: center;
+  }
+  
+  .effect-tag {
+    width: 90px;
+    height: 26px;
+    font-size: 0.75rem;
+  }
+  
+  .food-image1 {
+    width: 160px;
+    height: 60px;
+  }
+  
+  .food-image2 {
+    width: 280px;
+    height: 120px;
+  }
+  
+  .doctor-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .doctor-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-text {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .doctor-news,
+  .doctor-new {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
