@@ -363,6 +363,7 @@
   .input-container,
   .output-container {
     padding: 20px 15px;
+    margin-left: 0; /* 移除左边距，确保居中显示 */
   }
   
   .input-module,
@@ -427,6 +428,7 @@
   .input-container,
   .output-container {
     padding: 15px 10px;
+    margin-left: 0; /* 确保在最小屏幕上也居中 */
   }
   
   .center-flow {

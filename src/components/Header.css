@@ -32,12 +32,12 @@ body {
 /* 平板设备优化 */
 @media (max-width: 1024px) and (min-width: 769px) {
   .nav {
-    gap: 15px; /* 平板端减少间距 */
+    gap: 10px; /* 平板端减少间距 */
     margin: 0 20px;
   }
   
   .nav-item {
-    font-size: 0.8rem; /* 稍微减小字体 */
+    font-size: 0.6rem; /* 稍微减小字体 */
     
   }
 }
@@ -45,13 +45,13 @@ body {
 /* 小平板设备进一步优化 */
 @media (max-width: 900px) and (min-width: 769px) {
   .nav {
-    gap: 10px; /* 进一步减少间距 */
-    margin: 0 15px;
+    gap: 7px; 
+    margin: 0 10px;
   }
   
   .nav-item {
     font-size: 0.85rem;
-    padding: 6px 8px; /* 减少内边距 */
+    padding: 6px 6px; 
   }
 }
 
@@ -68,10 +68,13 @@ body {
     padding: 15px 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     border-radius: 0 0 8px 8px;
+    gap:10px;
+
   }
   
   .nav.nav-open {
     display: flex;
+    gap: 10px;
   }
   
   .nav-item {
@@ -124,7 +127,6 @@ body {
 .header-actions {
   display: flex;
   align-items: center;
-  min-width: 50px; /* 为汉堡菜单预留空间 */
   justify-content: flex-end;
 }
 
@@ -301,11 +303,12 @@ body {
   
   .nav.nav-open {
     display: flex;
+    max-width: 500px;
   }
   
   .nav-item {
-    padding: 12px 16px;
-    margin: 2px 0;
+    padding: 4px 10px; 
+    margin: 0;
     border-radius: 6px;
     text-align: center;
     background: #f8f9fa;

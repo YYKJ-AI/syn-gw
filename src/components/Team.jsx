@@ -19,13 +19,13 @@ function Team() {
         <div className="team-members">
           <div className="team-member" data-aos="fade-up" data-aos-delay="0">
             <div className="member-avatar">
-              <img src={kongImage} alt="孔繁程" />
+              <img src={kongImage} alt="孔繁澄" />
             </div>
             <div className="member-info">
-              <h3 className="member-name">孔繁程</h3>
+              <h3 className="member-name">孔繁澄</h3>
               <div className="member-title">联合创始人 & 首席执行官</div>
               <div className="member-description">
-                <p>科技与艺术领域连续创业者，毕业于中央美术学院</p>
+                <p>科技与艺术领域连续创新者，毕业于中央美术学院</p>
                 <p>正大管理学院 MBA 教授</p>
                 <p>艺术品投资估值风控工具-繁海五力模型创始人</p>
                 <p>视觉中國首席策略咨询师</p>

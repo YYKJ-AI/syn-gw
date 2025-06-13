@@ -18,18 +18,18 @@ const resources = {
         companyName: '北京盈养科技',
         title: 'AI精准营养生物电监测',
         stats: {
-          modules: '5大核心功能模块',
+          modules: '5大核心功能',
           innovation: '90秒无创监测',
           projects: '82种监测项目'
         },
         features: {
-          feature1: '无创血糖检测',
-          feature2: '具身对话数据管理',
-          feature3: '数据验证监界效果',
-          feature4: 'AI评估营养效动',
-          feature5: '个性定制营养机调'
+          feature1: '无创营养活力检测',
+          feature2: '具身营养数据管理',
+          feature3: '数据验证营养效果',
+          feature4: 'AI评估营养效能',
+          feature5: '个性定制营养方案'
         },
-        description: '盈养健康设备 —— 为用户营造知盈养亏身心守衡的数据环境和产品服务'
+        description: '盈养科技-依靠具身数据，为用户构建知盈养亏、身心守衡的健康管理系统及可验证的营养调理服务。'
       },
       research: {
         title: '前沿研究',
